@@ -1,0 +1,319 @@
+/* Global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f172a;
+  --bg-soft: #111827;
+  --card-bg: #020617;
+  --accent: #f97316;
+  --accent-soft: rgba(249, 115, 22, 0.15);
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border-subtle: #1f2937;
+  --radius-lg: 1.25rem;
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.75);
+  --shadow-card: 0 12px 30px rgba(15, 23, 42, 0.6);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.15), transparent 55%),
+    var(--bg);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* Layout utilities */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header */
+.site-header {
+  padding: 2.5rem 0 1.25rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 2.1rem;
+  letter-spacing: 0.03em;
+}
+
+.site-subtitle {
+  margin: 0.4rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.badge {
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: #111827;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 12px 30px rgba(249, 115, 22, 0.35);
+}
+
+/* Tabs nav */
+.tabs-nav {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  backdrop-filter: blur(14px);
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9));
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.tabs-nav-inner {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.75rem 0;
+}
+
+.tab-button {
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.12s ease;
+}
+
+.tab-button:hover {
+  border-color: rgba(148, 163, 184, 0.5);
+  color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.tab-button.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: #fed7aa;
+}
+
+/* Main content */
+.main-content {
+  padding: 1.75rem 0 3rem;
+}
+
+/* Cards */
+.card {
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), var(--card-bg));
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.6rem 1.4rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.card + .card {
+  margin-top: 1.5rem;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Typography */
+h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.intro-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.6rem;
+}
+
+.hint-text {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Process grid */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.process-step {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 1rem;
+  padding: 1rem 1rem 0.9rem;
+  border: 1px solid rgba(51, 65, 85, 0.9);
+}
+
+.process-step h3 {
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+  font-size: 1rem;
+}
+
+.process-step ul,
+.process-step ol {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Brew log cards */
+.batch-card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.25rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid rgba(51, 65, 85, 0.95);
+}
+
+.batch-card:first-of-type {
+  border-top: none;
+  padding-top: 0.25rem;
+}
+
+/* Images ~3x bigger */
+.batch-image img {
+  width: 100%;
+  height: 450px;  /* was 150px before */
+  object-fit: cover;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(30, 64, 175, 0.55);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.85);
+}
+
+.batch-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.batch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.batch-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.batch-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Flavour list */
+.flavour-list {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.flavour-item {
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 0.75rem;
+  padding: 0.7rem 0.75rem 0.6rem;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.flavour-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.flavour-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.flavour-rating {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: #fbbf24;
+}
+
+.flavour-notes {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* Tabs panels */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 1.2rem 0 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .batch-card {
+    grid-template-columns: 1fr;
+  }
+
+  .batch-image img {
+    height: 320px;
+  }
+
+  .tabs-nav-inner {
+    overflow-x: auto;
+  }
+}

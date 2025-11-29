@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alicia's Kombucha Journal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Optional: Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div>
+        <h1 class="site-title">Alicia's Kombucha Journal</h1>
+        <p class="site-subtitle">Tracking my brews, flavours, and fizz.</p>
+      </div>
+      <div class="badge">🍹 Home Brewed</div>
+    </div>
+  </header>
+
+  <nav class="tabs-nav">
+    <div class="container tabs-nav-inner">
+      <button class="tab-button active" data-tab="instructions">How to Make Kombucha</button>
+      <button class="tab-button" data-tab="brew-log">Brew Log</button>
+    </div>
+  </nav>
+
+  <main class="container main-content">
+    <!-- Instructions TAB -->
+    <section id="instructions" class="tab-panel active">
+      <article class="card">
+        <h2>My Kombucha Process</h2>
+        <p class="intro-text">
+          This is my personal method for making kombucha at home. My household has become obsessed with kombucha! We drink it daily - it's fun, refreshing, fizzy, and there are always new flavours to try. I would recomend anyone to try it out!
+        </p>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <h3>1. Gather Ingredients</h3>
+            <ul>
+              <li>3–4 black or green tea bags (or 8–10 g loose tea)</li>
+              <li>1 cup (200 g) white sugar</li>
+              <li>~3 L water</li>
+              <li>1 SCOBY</li>
+              <li>Starter tea (1–2 cups from a previous batch or store-bought raw kombucha)</li>
+            </ul>
+          </div>
+
+          <div class="process-step">
+            <h3>2. Brew the Sweet Tea</h3>
+            <ol>
+              <li>Boil ~1 L of water.</li>
+              <li>Steep tea for 10–15 minutes.</li>
+              <li>Remove tea and stir in the sugar until fully dissolved.</li>
+              <li>Top up with cool water until the total is ~3 L.</li>
+              <li>Let cool completely to room temperature.</li>
+            </ol>
+          </div>
+
+          <div class="process-step">
+            <h3>3. Primary Fermentation</h3>
+            <ol>
+              <li>Pour the cooled sweet tea into a clean glass jar.</li>
+              <li>Add the SCOBY and starter tea.</li>
+              <li>Cover with a breathable cloth and rubber band.</li>
+              <li>Ferment 7–14 days at room temperature, out of direct sunlight.</li>
+              <li>Taste starting around day 7 until it’s slightly tart but not too sour.</li>
+            </ol>
+          </div>
+
+          <div class="process-step">
+            <h3>4. Second Fermentation & Flavouring</h3>
+            <ol>
+              <li>Remove SCOBY and some starter tea for the next batch.</li>
+              <li>Bottle the kombucha in swing-top or airtight bottles.</li>
+              <li>Add flavourings (fruit, juice, herbs, ginger, etc.).</li>
+              <li>Leave at room temp 2–5 days to build carbonation.</li>
+              <li>Burp bottles once a day to avoid overpressure.</li>
+              <li>Move to the fridge when it tastes right.</li>
+            </ol>
+          </div>
+
+          <div class="process-step">
+            <h3>5. Safety & Cleaning Notes</h3>
+            <ul>
+              <li>Always wash hands and equipment well.</li>
+              <li>Watch for mold (fuzzy patches, green/black/white) – when in doubt, throw it out.</li>
+              <li>Use glass, not metal, for long contact.</li>
+              <li>Label dates and flavours so you can track what works best.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Brew Log TAB -->
+    <section id="brew-log" class="tab-panel">
+      <div class="card">
+        <div class="card-header-row">
+          <h2>Brew Log</h2>
+        </div>
+
+        <!-- Example Batch Card #1 -->
+        <article class="batch-card">
+          <div class="batch-image">
+            <img src="images/batch-1.jpg" alt="Classic kombucha, Batch 1">
+          </div>
+          <div class="batch-content">
+            <div class="batch-header">
+              <h3>Batch #1 – Classic Test Batch</h3>
+              <span class="batch-date">Brewed: 2025-11-29</span>
+            </div>
+
+            <ul class="flavour-list">
+              <li class="flavour-item">
+                <div class="flavour-header">
+                  <span class="flavour-name">Plain (baseline)</span>
+                  <span class="flavour-rating">★★★☆☆</span>
+                </div>
+                <p class="flavour-notes">
+                  Started here to understand the base tartness and fizz. 10 days primary, 3 days second ferment.
+                  A bit sharp; next time try bottling a day earlier.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Example Batch Card #2 -->
+        <article class="batch-card">
+          <div class="batch-image">
+            <img src="images/batch-2.jpg" alt="Raspberry ginger kombucha, Batch 2">
+          </div>
+          <div class="batch-content">
+            <div class="batch-header">
+              <h3>Batch #2 – Raspberry Ginger</h3>
+              <span class="batch-date">Brewed: 2025-12-06</span>
+            </div>
+
+            <ul class="flavour-list">
+              <li class="flavour-item">
+                <div class="flavour-header">
+                  <span class="flavour-name">Raspberry</span>
+                  <span class="flavour-rating">★★★★☆</span>
+                </div>
+                <p class="flavour-notes">
+                  Great colour and nice fruity aroma. Slightly sweet; could use a tiny bit more tartness.
+                </p>
+              </li>
+              <li class="flavour-item">
+                <div class="flavour-header">
+                  <span class="flavour-name">Ginger</span>
+                  <span class="flavour-rating">★★★★★</span>
+                </div>
+                <p class="flavour-notes">
+                  Perfect warm spice and kick. Works super well with the raspberry.
+                  Might try a ginger-only batch in the future.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- TEMPLATE: copy-paste this for new batches -->
+        <!--
+        <article class="batch-card">
+          <div class="batch-image">
+            <img src="images/batch-X.jpg" alt="Describe batch briefly">
+          </div>
+          <div class="batch-content">
+            <div class="batch-header">
+              <h3>Batch #X –  Flavour Name</h3>
+              <span class="batch-date">Brewed: YYYY-MM-DD</span>
+            </div>
+
+            <ul class="flavour-list">
+              <li class="flavour-item">
+                <div class="flavour-header">
+                  <span class="flavour-name">Flavour #1</span>
+                  <span class="flavour-rating">★★★☆☆</span>
+                </div>
+                <p class="flavour-notes">
+                   notes for this flavour here (sweetness, tartness, fizz, etc.).
+                </p>
+              </li>
+              <li class="flavour-item">
+                <div class="flavour-header">
+                  <span class="flavour-name">Flavour #2</span>
+                  <span class="flavour-rating">☆☆☆☆☆</span>
+                </div>
+                <p class="flavour-notes">
+                    leave unrated at first and update the stars once its been tasted.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </article>
+        -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made with tea, sugar, and SCOBYs. 💛</p>
+    </div>
+  </footer>
+
+  <!-- JS for the tabs -->
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-tab');
+
+        // Update button active state
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Show/hide panels
+        tabPanels.forEach(panel => {
+          if (panel.id === target) {
+            panel.classList.add('active');
+          } else {
+            panel.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
