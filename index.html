@@ -102,13 +102,23 @@
         <div class="card-header-row">
           <h2>Brew Log</h2>
         </div>
-
+        <div id="batch-17"></div>
+        <div id="batch-16"></div>
+        <div id="batch-15"></div>
+        <div id="batch-14"></div>
+        <div id="batch-13"></div>
+        <div id="batch-12"></div>
+        <div id="batch-11"></div>
+        <div id="batch-10"></div>
+        <div id="batch-9"></div>
+        <div id="batch-8"></div>
+        <div id="batch-7"></div>
+        <div id="batch-6"></div>
         <div id="batch-5"></div>
         <div id="batch-4"></div>
         <div id="batch-3"></div>
         <div id="batch-2"></div>
         <div id="batch-1"></div>
-
       </div>
     </section>
   </main>
@@ -143,7 +153,7 @@
       });
     });
   </script>
-  
+
   <!-- JS to load batch cards -->
   <script>
     async function loadBatch(id, file) {
@@ -165,6 +175,18 @@
 
     // Make sure this runs after the DOM is ready
     document.addEventListener('DOMContentLoaded', () => {
+      loadBatch("batch-17", "batches/batch-17.html");
+      loadBatch("batch-16", "batches/batch-16.html");
+      loadBatch("batch-15", "batches/batch-15.html");
+      loadBatch("batch-14", "batches/batch-14.html");
+      loadBatch("batch-13", "batches/batch-13.html");
+      loadBatch("batch-12", "batches/batch-12.html");
+      loadBatch("batch-11", "batches/batch-11.html");
+      loadBatch("batch-10", "batches/batch-10.html");
+      loadBatch("batch-9", "batches/batch-9.html");
+      loadBatch("batch-8", "batches/batch-8.html");
+      loadBatch("batch-7", "batches/batch-7.html");
+      loadBatch("batch-6", "batches/batch-6.html");
       loadBatch("batch-5", "batches/batch-5.html");
       loadBatch("batch-4", "batches/batch-4.html");
       loadBatch("batch-3", "batches/batch-3.html");
